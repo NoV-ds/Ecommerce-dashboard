@@ -1,7 +1,7 @@
 menu {
     width: 100px;
     height: 100%;
-    background: #12162c;
+    background: #4E31AA;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@ menu {
 }
 
 menu img {
-    width: 3em;
+    width: 5em;
     padding-top: 30px;
 }
 
@@ -31,7 +31,7 @@ menu ul li {
 
 menu ul li a {
     font-size: 24px;
-    color:#8c8a95;
+    color:#F7F7F8;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -39,7 +39,7 @@ menu ul li a {
 menu ul li a::before {
     position: absolute;
     content: "";
-    background: #b1147d;
+    background: #3795BD;
     top: 5px;
     left: -10px;
     width: 0px;
@@ -48,7 +48,7 @@ menu ul li a::before {
 }
 
 menu ul li:hover a{
-    color: #b1147d;
+    color: hsl(198, 55%, 48%);
 }
 
 menu ul li:hover a::before {
@@ -56,11 +56,26 @@ menu ul li:hover a::before {
     transition: all 0.3s;
 }
 
-menu ul li:active a {
-    color: #b1147d;
+menu ul li.active a {
+    color: #3795BD;
 }
 
-menu ul li:active a::before {
+menu ul li.active a::before {
     width: 20px;
     transition: all 0.3s;
+}
+
+#lastMenu {
+    margin-top: auto;
+}
+
+@media only screen and (max-width: 525px){
+    menu {
+        min-width: 60px;
+        width: 60px;
+    }
+
+    menu img {
+        width: 3em;
+    }
 }
